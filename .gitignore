@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data Files (Satellite Imagery, Arrays, Archives)
+# Keep the data folder structure but ignore the heavy files inside
+data/**/*.tif
+data/**/*.tiff
+data/**/*.npy
+data/**/*.npz
+data/**/*.h5
+data/**/*.tfrecord
+*.zip
+*.tar
+*.tar.gz
+
+# Model Checkpoints and Weights
+models/**/*.pt
+models/**/*.pth
+models/**/*.ckpt
+models/**/*.h5
+models/**/*.onnx
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

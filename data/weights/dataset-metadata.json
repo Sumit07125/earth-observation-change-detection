@@ -1,0 +1,10 @@
+{
+  "title": "Geo-Nexus v3.2 Pretrained Foundation Weights",
+  "id": "sumit07125/ssl4eo-weights",
+  "licenses": [
+    {
+      "name": "other"
+    }
+  ],
+  "description": "Pretrained ResNet-18 weights for Sentinel-2 (SSL4EO-S12 MoCo-v2, CC-BY-4.0) and Sentinel-1 (BigEarthNet v2.0, MIT) for Geo-Nexus v3.2."
+}
