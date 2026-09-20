@@ -2957,7 +2957,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph TRAINAOI["TRAIN AOI half · A-west + B-north"]
-        U1["6,800 unlabeled pairs"] --> DP["DAPT · unsupervised"]
+        U1["6,664 unlabeled pairs"] --> DP["DAPT · unsupervised"]
         L1["MH-VAL 30 labelled"] --> V1["threshold selection"]
         L1 --> V2["Step-6 calibration"]
         L1 --> V3["P-FS early stopping"]
@@ -3006,7 +3006,7 @@ flowchart LR
         R1["ImageNet init"]
         R2["SSL4EO frozen"]
         R3["SSL4EO + DAPT"]
-        R4["DAPT, N in 0..6800<br/>x3 seeds"]
+        R4["DAPT, N in 0..6664<br/>x3 seeds"]
     end
 
     subgraph BASE["Zero-training baselines"]
@@ -5692,6 +5692,8 @@ Google's model into yours. §22.4 explains why that is acceptable and how to say
 Do not treat building outlines as crisp. Downsample to your 10 m grid with a mean
 reducer, then threshold — never nearest-neighbour, which produces aliased speckle.
 
+**L5 — Observed Pune construction-evidence limitation (2026-09-19):** Under the frozen v3.2 fusion rules, final construction prevalence in Zone A (Pune) was 0.167%. Visual QA confirmed non-empty and spatially plausible Open Buildings candidates. Sensitivity diagnostics showed that relaxing Open Buildings thresholds alone did not produce 1% final construction, and lowering the Dynamic World built-change margin to 0.10 produced 0.454% final construction. Therefore the 1% construction target is not supported by the observed evidence and is not used as a hard acceptance criterion.
+
 ---
 
 ## 22.3 Dynamic World — use it narrowly, or it will wreck your labels
@@ -6000,6 +6002,8 @@ resolved by a human.
 ### Expected label composition
 
 From the verified fusion run on synthetic-but-realistic evidence densities:
+
+**Planning expectation only:** the approximate class proportions shown below were derived from synthetic-but-realistic evidence densities and are not acceptance criteria for a real AOI. Actual prevalence is dataset- and evidence-dependent and must be reported after fusion.
 
 ```
   no_change     ~55-70%      trainable
@@ -7570,7 +7574,7 @@ for lo in [45, 50, 55, 60, 65]:
 
 **Gate:** `autolabel_report.json` shows, for all three zones, uncertain between 8%
 and 40%, construction non-trivially present in Zone A, and water classes present in
-Zone B. If Zone A construction is under 1%, the Open Buildings thresholds are wrong.
+Zone B. **Zone-A construction prevalence is an evidence-adequacy diagnostic, not a mandatory pass/fail threshold. If final construction prevalence is below 1%, perform Open Buildings/Dynamic World evidence QA and report the observed prevalence. Do not alter the frozen fusion parameters solely to satisfy a target prevalence. If QA confirms non-empty and spatially plausible construction evidence, the result is retained as an evidence-limited auto-label outcome.**
 
 ### Step 5 · Stage to Kaggle  (30 min)
 

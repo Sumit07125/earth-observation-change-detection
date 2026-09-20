@@ -12,15 +12,22 @@ env/
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
+notebooks/GeoNexus_DAPT_FINAL_6664_CHECKPOINT10_RESUME.ipynb
 
-# Data Files (Satellite Imagery, Arrays, Archives)
-# Keep the data folder structure but ignore the heavy files inside
-data/**/*.tif
-data/**/*.tiff
-data/**/*.npy
-data/**/*.npz
-data/**/*.h5
-data/**/*.tfrecord
+# Geo-Nexus Data & Datasets
+# Ignore entire dataset directories to prevent git indexing overhead for thousands of files
+data/OSCD/
+data/weights/
+data/geonexus_v3_raw/
+data/geonexus-mh-v3/
+
+# Ignore loose data files across the project
+*.npy
+*.npz
+*.tif
+*.tiff
+*.tfrecord
+*.h5
 *.zip
 *.tar
 *.tar.gz
@@ -31,6 +38,7 @@ models/**/*.pth
 models/**/*.ckpt
 models/**/*.h5
 models/**/*.onnx
+*.pth
 
 # OS generated files
 .DS_Store

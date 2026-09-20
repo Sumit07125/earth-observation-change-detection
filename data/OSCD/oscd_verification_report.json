@@ -1,77 +1,863 @@
 {
-  "root": "D:\\JUPYTER_WORK\\Major_Project\\OSCD",
-  "images_root": "D:\\JUPYTER_WORK\\Major_Project\\OSCD\\Images",
-  "train_labels_root": "D:\\JUPYTER_WORK\\Major_Project\\OSCD\\Train Labels",
-  "test_labels_root": "D:\\JUPYTER_WORK\\Major_Project\\OSCD\\Test Labels",
-  "expected_cities": [
+  "overall": "PASS",
+  "city_count": 24,
+  "report": {
+    "abudhabi": {
+      "city": "abudhabi",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\abudhabi\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          799,
+          785
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\abudhabi\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          799,
+          785
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "abudhabi-cm.tif",
+        "shape": [
+          799,
+          785
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "aguasclaras": {
+      "city": "aguasclaras",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\aguasclaras\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          471,
+          525
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\aguasclaras\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          471,
+          525
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "aguasclaras-cm.tif",
+        "shape": [
+          471,
+          525
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "beihai": {
+      "city": "beihai",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\beihai\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          902,
+          772
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\beihai\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          902,
+          772
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "beihai-cm.tif",
+        "shape": [
+          902,
+          772
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "beirut": {
+      "city": "beirut",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\beirut\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          1180,
+          1070
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\beirut\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          1180,
+          1070
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "beirut-cm.tif",
+        "shape": [
+          1180,
+          1070
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "bercy": {
+      "city": "bercy",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\bercy\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          395,
+          360
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\bercy\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          395,
+          360
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "bercy-cm.tif",
+        "shape": [
+          395,
+          360
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "bordeaux": {
+      "city": "bordeaux",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\bordeaux\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          517,
+          461
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\bordeaux\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          517,
+          461
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "bordeaux-cm.tif",
+        "shape": [
+          517,
+          461
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "cupertino": {
+      "city": "cupertino",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\cupertino\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          1015,
+          788
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\cupertino\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          1015,
+          788
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          1015,
+          788
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "hongkong": {
+      "city": "hongkong",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\hongkong\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          695,
+          540
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\hongkong\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          695,
+          540
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          695,
+          540
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "mumbai": {
+      "city": "mumbai",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\mumbai\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          858,
+          557
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\mumbai\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          858,
+          557
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          858,
+          557
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "nantes": {
+      "city": "nantes",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\nantes\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          522,
+          582
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\nantes\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          522,
+          582
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          522,
+          582
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "paris": {
+      "city": "paris",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\paris\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          408,
+          390
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\paris\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          408,
+          390
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          408,
+          390
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "pisa": {
+      "city": "pisa",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\pisa\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          776,
+          718
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\pisa\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          776,
+          718
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          776,
+          718
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "rennes": {
+      "city": "rennes",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\rennes\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          339,
+          563
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\rennes\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          339,
+          563
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          339,
+          563
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "saclay_e": {
+      "city": "saclay_e",
+      "official_split": "train",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\saclay_e\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          639,
+          688
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\saclay_e\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          639,
+          688
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          639,
+          688
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "brasilia": {
+      "city": "brasilia",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\brasilia\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          433,
+          469
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\brasilia\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          433,
+          469
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "brasilia-cm.tif",
+        "shape": [
+          433,
+          469
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "chongqing": {
+      "city": "chongqing",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\chongqing\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          730,
+          544
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\chongqing\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          730,
+          544
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "chongqing-cm.tif",
+        "shape": [
+          730,
+          544
+        ],
+        "values": [
+          1,
+          2
+        ]
+      }
+    },
+    "dubai": {
+      "city": "dubai",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\dubai\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          774,
+          634
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\dubai\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          774,
+          634
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          774,
+          634
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "lasvegas": {
+      "city": "lasvegas",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\lasvegas\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          824,
+          716
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\lasvegas\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          824,
+          716
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          824,
+          716
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "milano": {
+      "city": "milano",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\milano\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          545,
+          558
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\milano\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          545,
+          558
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          545,
+          558
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "montpellier": {
+      "city": "montpellier",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\montpellier\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          426,
+          451
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\montpellier\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          426,
+          451
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          426,
+          451
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "norcia": {
+      "city": "norcia",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\norcia\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          241,
+          385
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\norcia\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          241,
+          385
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          241,
+          385
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "rio": {
+      "city": "rio",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\rio\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          353,
+          426
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\rio\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          353,
+          426
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          353,
+          426
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "saclay_w": {
+      "city": "saclay_w",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\saclay_w\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          639,
+          688
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\saclay_w\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          639,
+          688
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          639,
+          688
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    },
+    "valencia": {
+      "city": "valencia",
+      "official_split": "test",
+      "imgs_1": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\valencia\\imgs_1_rect",
+        "rect": true,
+        "shape": [
+          458,
+          476
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "imgs_2": {
+        "dir": "C:\\Users\\sumit_mali\\Desktop\\Geo_Watch\\data\\OSCD\\Images\\valencia\\imgs_2_rect",
+        "rect": true,
+        "shape": [
+          458,
+          476
+        ],
+        "bands_found": 13,
+        "missing": []
+      },
+      "label": {
+        "file": "cm.png",
+        "shape": [
+          458,
+          476
+        ],
+        "values": [
+          0,
+          255
+        ]
+      }
+    }
+  },
+  "actual_image_city_dirs": [
     "abudhabi",
     "aguasclaras",
     "beihai",
     "beirut",
     "bercy",
     "bordeaux",
-    "brasilia",
-    "chongqing",
     "cupertino",
-    "dubai",
     "hongkong",
-    "lasvegas",
-    "milano",
-    "montpellier",
     "mumbai",
     "nantes",
-    "norcia",
     "paris",
     "pisa",
     "rennes",
-    "rio",
     "saclay_e",
-    "saclay_w",
-    "valencia"
-  ],
-  "found_images": [
-    "abudhabi",
-    "aguasclaras",
-    "beihai",
-    "beirut",
-    "bercy",
-    "bordeaux",
-    "brasilia",
-    "chongqing",
-    "cupertino",
-    "dubai",
-    "hongkong",
-    "lasvegas",
-    "milano",
-    "montpellier",
-    "mumbai",
-    "nantes",
-    "norcia",
-    "paris",
-    "pisa",
-    "rennes",
-    "rio",
-    "saclay_e",
-    "saclay_w",
-    "valencia"
-  ],
-  "found_train_labels": [
-    "abudhabi",
-    "aguasclaras",
-    "beihai",
-    "beirut",
-    "bercy",
-    "bordeaux",
-    "cupertino",
-    "hongkong",
-    "mumbai",
-    "nantes",
-    "paris",
-    "pisa",
-    "rennes",
-    "saclay_e"
-  ],
-  "found_test_labels": [
     "brasilia",
     "chongqing",
     "dubai",
@@ -83,10 +869,5 @@
     "saclay_w",
     "valencia"
   ],
-  "missing_in_images": [],
-  "missing_in_train": [],
-  "missing_in_test": [],
-  "errors": [],
-  "warnings": [],
-  "status": "PASSED"
+  "actual_image_city_count": 24
 }
