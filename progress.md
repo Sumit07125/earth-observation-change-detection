@@ -368,6 +368,23 @@ The prepared tensors were seamlessly pushed to Kaggle.
 * **Next Steps:** Mount `/kaggle/input/oscd-onera-v1/` into the supervised Kaggle notebook after the `geonexus-mh-v3` DAPT weights are fully converged.
 
 
+### 11.3 OSCD Supervised Fine-Tuning Execution (COMPLETE ✅)
+The downstream supervised fine-tuning of the frozen DAPT encoder has been successfully executed on Kaggle using the verified architecture.
+* **Execution Notebook:** [`notebooks/geonexus-p3-oscd-supervised-transfer-final-kaggle.ipynb`](file:///c:/Users/sumit_mali/Desktop/Geo_Watch/notebooks/geonexus-p3-oscd-supervised-transfer-final-kaggle.ipynb)
+* **Architecture Validation:** The notebook perfectly implemented the frozen protocol (`g=1`, `optical_only` mode, SAR and quality gate frozen) and applied the critical NumPy shape/broadcasting bug fixes (maintaining precise 3D tensor scaling). SAR batch normalization running statistics were flawlessly frozen in evaluation mode.
+* **Execution Results:**
+  - **Validation Tuning:** Achieved a Best Validation F1 of **0.4831** at a locked threshold of **0.52**.
+  - **Untouched Test Set Metrics:**
+    - **Test F1 Score:** 0.5046
+    - **Test IoU:** 0.3375
+    - **Test Precision:** 0.5391
+    - **Test Recall:** 0.4743
+    - **Test Accuracy:** 95.10%
+    - **Test Average Precision (AP):** 0.5076
+* **Kaggle Artifact Upload:** A robust reproducibility package (including curves, metrics, final model weights, state dicts, and thresholds) was compressed and pushed to the Kaggle Dataset: `sumit07125/geonexus-p3-oscd-artifacts`.
+* **Next Steps:** Proceed to Phase P4 Zero-Shot Evaluation on the Maharashtra Dataset using the fully trained `geonexus_v3_2_p3_oscd_model.pth`.
+
+
 ---
 
 ## 12. Phase P4: Human Verification & Public Dataset Release
@@ -385,3 +402,30 @@ The Geo-Nexus project's public Maharashtra dataset verification and packaging pi
 * **Scientific Transparency:** The release explicitly packages exactly **170 human-reviewed automatic labels**. The 50 patches belonging to the blind and monsoon test sets were actively excluded from this artifact since they were not independently redrawn by a human. This honest separation prevents downstream users from claiming false superiority on the full test sets.
 * **Documentation Engine:** Dynamically generates robust Kaggle dataset metadata (`README.md` and `DATA_SOURCES.md`), documenting the 17-channel input composition, Open Buildings temporal limits (stopping at 2023), and the correct "other" Kaggle license type reflecting mixed Copernicus/Google/JRC attribution.
 * **Kaggle Synchronization:** Features fully integrated Kaggle runtime authentication, downloading the base 3.5GB dataset, replacing the verified overlays, performing shape/content self-tests, and successfully pushing the newly verified Numpy arrays (`mh_val`, `mh_adapt`, and `mh_test_partial`) to Kaggle (`sumit07125/geonexus-mh-v3`). Also exposes live dataset processing status (public/private visibility).
+
+### 12.3 P4 Evaluation-Source Staging (COMPLETE ✅)
+To implement "Step A" (the rigorous input/audit gate for Phase P4), a dedicated staging pipeline was executed to securely extract the exact 170 human-reviewed patches from the massive base dataset.
+* **Execution Notebook:** [`notebooks/GeoNexus_P4_MH_Eval_Source_Staging_FINAL_V3.ipynb`](file:///c:/Users/sumit_mali/Desktop/Geo_Watch/notebooks/GeoNexus_P4_MH_Eval_Source_Staging_FINAL_V3.ipynb)
+* **Dataset Audit & Extraction:** The notebook verified the source coordinates, resolved stems across splits, and successfully extracted the exact 17-channel tensors matching the verified manifests:
+  - `MH-VAL`: 30 patches, shape `(30, 2, 17, 128, 128)`
+  - `MH-ADAPT`: 30 patches, shape `(30, 2, 17, 128, 128)`
+  - `MH-TEST`: 110 patches, shape `(110, 2, 17, 128, 128)` (Strictly enforcing the exclusion of blind/monsoon sets).
+* **Kaggle Synchronization:** The clean, standalone P4 evaluation dataset (tensors, labels, manifests, and normalizations) was successfully compiled into a ~200 MB payload and pushed to Kaggle as a private dataset: `sumit07125/geonexus-mh-p4-eval-v3-2`.
+* **Impact:** This isolates Phase P4a/P4b inference from the 3.5GB base pretraining data, guaranteeing that the P4 zero-shot and few-shot runs operate exclusively on cleanly normalized, strictly verified 170-patch tensors.
+
+---
+
+## 13. Phase P4: Zero-Shot & Few-Shot Evaluation
+
+### 13.1 P4a: Zero-Shot Evaluation (COMPLETE ✅)
+* **Execution Notebook:** [`notebooks/geonexus-p4a-mh-zeroshot-final.ipynb`](file:///c:/Users/sumit_mali/Desktop/Geo_Watch/notebooks/geonexus-p4a-mh-zeroshot-final.ipynb)
+* **Protocol Enforcement:** The evaluation strictly consumed the `geonexus-mh-p4-eval-v3-2` standalone dataset, guaranteeing zero data leakage. The P3 checkpoint was loaded with `set_mode("optical_only")` forcing the multi-modal gate to exactly `g=1.0`, and all parameters were completely frozen.
+* **Overall MH-TEST (110 patches) Results:**
+  - **ZS-strict** (Using OSCD threshold `0.52`): **F1 = 0.0585** | **IoU = 0.0301**
+  - **ZS-calibrated** (Using MH-VAL threshold `0.05`): **F1 = 0.1287** | **IoU = 0.0688**
+  - **Average Precision (strict):** **0.4539**
+* **Per-Zone Calibration Impact:**
+  - **Pune (n=40):** F1 improved from `0.0058` to `0.0149` with calibration.
+  - **Satara (n=40):** F1 improved from `0.0410` to `0.1344` with calibration.
+  - **Vidarbha (n=30):** F1 improved from `0.1256` to `0.2255` with calibration.
+* **Artifacts:** Generated comprehensive reporting artifacts including JSON metrics, a CSV summary, and a visual QC plot, ensuring full reproducibility.
