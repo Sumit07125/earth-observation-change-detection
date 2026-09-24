@@ -20,6 +20,10 @@ model_training/data/OSCD/
 model_training/data/weights/
 model_training/data/geonexus_v3_raw/
 model_training/data/geonexus-mh-v3/
+Backend/data/OSCD/
+Backend/data/weights/
+Backend/data/geonexus_v3_raw/
+Backend/data/geonexus-mh-v3/
 
 # Ignore loose data files across the project
 *.npy
@@ -38,6 +42,11 @@ model_training/models/**/*.pth
 model_training/models/**/*.ckpt
 model_training/models/**/*.h5
 model_training/models/**/*.onnx
+Backend/models/**/*.pt
+Backend/models/**/*.pth
+Backend/models/**/*.ckpt
+Backend/models/**/*.h5
+Backend/models/**/*.onnx
 *.pth
 
 # OS generated files
@@ -48,3 +57,7 @@ model_training/models/**/*.onnx
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Exceptions (Do NOT ignore these)
+!Backend/models/geonexus_v3_2_k30/
+!Backend/models/geonexus_v3_2_k30/**
