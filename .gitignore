@@ -12,14 +12,14 @@ env/
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
-notebooks/GeoNexus_DAPT_FINAL_6664_CHECKPOINT10_RESUME.ipynb
+model_training/notebooks/GeoNexus_DAPT_FINAL_6664_CHECKPOINT10_RESUME.ipynb
 
 # Geo-Nexus Data & Datasets
 # Ignore entire dataset directories to prevent git indexing overhead for thousands of files
-data/OSCD/
-data/weights/
-data/geonexus_v3_raw/
-data/geonexus-mh-v3/
+model_training/data/OSCD/
+model_training/data/weights/
+model_training/data/geonexus_v3_raw/
+model_training/data/geonexus-mh-v3/
 
 # Ignore loose data files across the project
 *.npy
@@ -33,11 +33,11 @@ data/geonexus-mh-v3/
 *.tar.gz
 
 # Model Checkpoints and Weights
-models/**/*.pt
-models/**/*.pth
-models/**/*.ckpt
-models/**/*.h5
-models/**/*.onnx
+model_training/models/**/*.pt
+model_training/models/**/*.pth
+model_training/models/**/*.ckpt
+model_training/models/**/*.h5
+model_training/models/**/*.onnx
 *.pth
 
 # OS generated files
